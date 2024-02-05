@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metal Security Doors - First Class Doors</title>
+    <!-- FAVICON  -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- poppins font cdn  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- materials icons and font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+
+    <!-- Links for CSS Style Sheets  -->
+    <link rel="stylesheet" href="styles/shared/header.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/pages/doors.css">
+    <link rel="stylesheet" href="styles/shared/footer.css" />
+
+    <!-- animate on scroll  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- EMAIL JS SCRIPT  -->
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "Xxl2okWcoKWjBSArx",
+    });
+  })();
+</script>
+
+  </head>
+  <body>
+    <!-- QUOTE MODAL  -->
+    <div class="quote-container">
+      <div class="quote-modal js-quote-modal">
+        <div class="model-header">
+          <h2 class="quote-title">Get quote</h2>
+          <i id="js-close-btn" class="material-icons close-quote">close</i>
+        </div>
+        <form
+          action=""
+          class="quote-form"
+          onsubmit="sendQuote(); reset(); return false;"
+        >
+          <div class="input-col">
+            <input
+              type="text"
+              placeholder="Name"
+              class="quote-input name js-quote-name"
+            />
+          </div>
+          <div class="input-col">
+            <input
+              type="tel"
+              placeholder="Phone number"
+              class="quote-input number js-quote-number"
+            />
+          </div>
+          <div class="input-col">
+            <input
+              type="email"
+              placeholder="Email"
+              class="quote-input email js-quote-email"
+              required
+            />
+            <p class="valid-email">*Valid email address required</p>
+          </div>
+
+          <p class="request">List your requirements</p>
+          <textarea
+            name="message"
+            class="message js-quote-message"
+            maxlength="1000"
+            placeholder="I was wondering about the availability and rates of the following doors (NB: Use the door codes to refer to specific doors):"
+          ></textarea>
+          <div class="submit">
+            <button type="submit" class="submit-button js-submit-quote">
+              Submit
+            </button>
+          </div>
+
+          <p class="warning">
+            Make sure to avoid including any sensitive information you don't
+            want to share with First Class Doors.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- HEADER  -->
+    <header class="header">
+      <!-- LOGO  -->
+      <div class="header-logo">
+        <a href="index.html"> <img src="icons/logo-FCD.png" /></a>
+      </div>
+
+      <i class="material-icons menu-btn js-menu-btn">menu</i>
+
+      <!-- NAVBAR  -->
+      <nav class="navbar">
+        <div class="head">
+          <a href="index.html"
+            ><span class="logo-head">First Class Doors</span></a
+          >
+          <button class="close-btn js-close-btn">&times;</button>
+        </div>
+
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li>
+            <a href="#">Our Products +</a>
+            <ul>
+              <li><a href="metal-sd.html">Metal Security Doors </a></li>
+              <li><a href="wooden-sd.html">Wooden Security Doors</a></li>
+              <li><a href="internal-d.html">Internal Doors</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HEADER QUOTE BUTTON  -->
+      <div class="button-container">
+        <button class="get-quote header-quote js-quote-btn">Get Quote</button>
+      </div>
+    </header>
+
+    <!-- CONTENT  -->
+    <h2 class="title">Metal Security Doors</h2>
+    <!-- BREADCRUMBS  -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+     <span class="unactiveBreadcrumb">/ Products</span>
+      <span class="activeBreadcrumb"
+        ><span class="forward-slash">/</span> Metal Security Doors</span
+      >
+    </div>
+    <h3 class="sub-title">Full-Steel Metal Security Doors</h3>
+    <p>
+      Our Full-Steel doors are designed to provide security, durability, and
+      aesthetics for homes and buildings. They are made of high quality
+      materials that can withstand various threats and conditions. Some of their
+      features are;
+      <span class="door-prop">bullet proof door cylinder</span>,
+      <span class="door-prop">central locking system</span>,
+      <span class="door-prop">aluminium galvanized</span>,
+      <span class="door-prop">anti-rust</span>,
+      <span class="door-prop">no fading</span>, and
+      <span class="door-prop">fire resistance up to 2hrs</span>.
+    </p>
+    <div class="container">
+       <div class="row">
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/s1.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            
+            <span class="door-code">
+             SP007
+            </p>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/s2.jpg" alt="" />
+          </div>
+          <div class="card-text">
+          
+            <span class="door-code">
+             SP005
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/s3.jpg" alt="" />
+          </div>
+          <div class="card-text">
+       
+            <span class="door-code">
+            SP001
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/s4.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+             SP004
+            </span>
+          </div>
+        </div>
+
+        
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/s6.jpg" alt="" />
+          </div>
+          <div class="card-text">
+          
+            <span class="door-code">
+             SP003
+            </>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/s7.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+              SP002
+            </span>
+          </div>
+        </div>
+      </div> 
+
+    </div>
+    <!-- TURKISH DOORS  -->
+    <h3 class="sub-title">Turkish Metal Security Doors</h3>
+    <p>
+      Our Turkish doors are also designed to provide security, durability, and
+      aesthetics for homes and buildings. Some of their features are;
+      <span class="door-prop">Central locking system</span> i.e, locks at the
+      top, bottom, and side, <span class="door-prop">galvanized steel</span>,
+      <span class="door-prop">resistant to corrosion and rust</span>,
+      <span class="door-prop">No fading</span>,
+      <span class="door-prop">Oven baked painting system</span>; as a protective
+      cover against all harsh weather conditions.
+    </p>
+    <div class="container">
+      <div  class="row">
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image js-card-image">
+            <img src="images/products/metal security doors/t1.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+             IR017
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/t2.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+            IR008
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/t3.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+              IR022
+            </span>
+          </div>
+        </div>
+
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/t6.jpg" alt="" />
+          </div>
+          <div class="card-text">
+          
+            <span class="door-code">
+             T1
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/t5.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+              IR025
+            </span>
+          </div>
+        </div>
+        <div data-aos="fade-up"  class="card">
+          <div class="card-image">
+            <img src="images/products/metal security doors/t4.jpg" alt="" />
+          </div>
+          <div class="card-text">
+           
+            <span class="door-code">
+              IR024
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4 class="footer-title">Company</h4>
+            <ul>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="">our products</a></li>
+              <li><a href="">privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Shop</h4>
+            <ul>
+              <li><a href="metal-sd.html">Metal doors</a></li>
+              <li><a href="wooden-sd.html">wooden doors</a></li>
+              <li><a href="internal-d.html">Internal doors</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">get help</h4>
+            <ul>
+              <li><a href="help.html">Installation Guidelines</a></li>
+
+              <li><a href="help.html">Delivery Information</a></li>
+              <li><a href="help.html">Payment and Refund policy</a></li>
+              <li><a href="contact.html">Branches</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">follow us</h4>
+            <div class="social-links">
+              <a
+                href="https://instagram.com/first.class.doors"
+                class="fa fa-instagram"
+                target="_blank"
+              ></a>
+            </div>
+            <div class="copyright">
+              Copyright &copy; 2024, All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+     <!-- animate on scroll  -->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <script>
+       AOS.init({
+         once: true,
+         duration: 1000,
+       });
+     </script>
+  </body>
+</html>

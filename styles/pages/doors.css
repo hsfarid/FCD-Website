@@ -1,0 +1,119 @@
+.title {
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(var(--primary-color), 0.6);
+  text-align: center;
+  padding: 30px;
+  font-size: 32px;
+  width: 100%;
+}
+p {
+  margin-left: 20px;
+  font-weight: 300;
+  color: var(--main-text-color);
+  font-size: 16px;
+}
+.sub-title {
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(var(--primary-color));
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 300px));
+  gap: 30px;
+  padding: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.card-image {
+  height: 300px;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card-text {
+  padding: 20px;
+}
+.card-text h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: rgba(var(--primary-color));
+  font-size: 16px;
+}
+.card-text p {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 20px;
+}
+.door-prop {
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(var(--secondary-color), 0.6);
+}
+/* BREADCRUMBS  */
+.breadcrumb {
+  margin: 20px 20px 30px;
+}
+.breadcrumb a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--main-text-color);
+  font-weight: 300;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+div span.activeBreadcrumb {
+  color: rgba(var(--secondary-color), 0.6);
+  font-weight: 300;
+  font-size: 13px;
+}
+span.unactiveBreadcrumb,
+.forward-slash {
+  font-size: 13px;
+  color: var(--main-text-color);
+  font-weight: 300;
+}
+
+/* responsive design  */
+@media (max-width: 599px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    text-align: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1030px) {
+  .row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1031px) {
+  .row {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,109 @@
+/* SECTION TITLE  */
+.title {
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(var(--primary-color), 0.6);
+  text-align: center;
+  padding: 30px;
+  font-size: 32px;
+  width: 100%;
+}
+/* STYLE THE BRANCH NAME */
+.branch-title-container {
+  background-color: rgba(var(--primary-color));
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.branch-title-container .branch-title {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
+/* STYLE THE BRANCHES CONTAINER  */
+.branches-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+.branch {
+  background-color: #ddd;
+  padding-bottom: 20px;
+}
+.branch .location,
+.branch .call,
+.branch .working-hours,
+.branch .email {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+.branch .call .details a {
+  color: rgba(var(--secondary-color));
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.branch .call .details a:hover {
+  text-decoration: underline;
+}
+.branch .location p {
+  color: rgba(var(--primary-color));
+  font-weight: 600;
+}
+span.head-office {
+  font-size: 14px;
+  font-weight: 300;
+}
+#googleMap {
+  margin: 10px auto;
+  width: 80%;
+  height: 280px;
+  border-radius: 8px;
+  margin-top: 60px;
+  background-color: white;
+}
+.map {
+  border-radius: 8px;
+}
+.branch .icon {
+  color: #777;
+}
+.branch .email a {
+  text-decoration: none;
+  color: rgba(var(--primary-color));
+}
+.branch .email a:hover {
+  text-decoration: underline;
+}
+
+/* responsive design  */
+/* for smaller screens  */
+@media (max-width: 719px) {
+  .branches-container {
+    grid-template-columns: 1fr;
+  }
+  .branch {
+    width: 85%;
+    margin: auto;
+  }
+  .branch .location,
+  .branch .call,
+  .branch .working-hours,
+  .branch .email {
+    gap: 60px;
+  }
+}
+@media (min-width: 720px) and (max-width: 1090px) {
+  .branches-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

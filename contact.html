@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - First Class Doors</title>
+    <!-- FAVICON  -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- poppins font cdn  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- materials icons and font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Links for CSS Style Sheets  -->
+    <link rel="stylesheet" href="styles/shared/header.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/pages/contact.css" />
+    <link rel="stylesheet" href="styles/pages/doors.css" />
+    <link rel="stylesheet" href="styles/shared/footer.css" />
+
+    <!-- EMAIL JS CDN  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("Xxl2okWcoKWjBSArx");
+      })();
+    </script>
+
+    <!-- animate on scroll  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <!-- QUOTE MODAL  -->
+    <div class="quote-container">
+      <div class="quote-modal js-quote-modal">
+        <div class="model-header">
+          <h2 class="quote-title">Get quote</h2>
+          <i id="js-close-btn" class="material-icons close-quote">close</i>
+        </div>
+        <form
+          action=""
+          class="quote-form"
+          onsubmit="sendQuote(); reset(); return false;"
+        >
+          <div class="input-col">
+            <input
+              type="text"
+              placeholder="Name"
+              class="quote-input name js-quote-name"
+            />
+          </div>
+          <div class="input-col">
+            <input
+              type="tel"
+              placeholder="Phone number"
+              class="quote-input number js-quote-number"
+            />
+          </div>
+          <div class="input-col">
+            <input
+              type="email"
+              placeholder="Email"
+              class="quote-input email js-quote-email"
+              required
+            />
+            <p class="valid-email">*Valid email address required</p>
+          </div>
+
+          <p class="request">List your requirements</p>
+          <textarea
+            name="message"
+            class="message js-quote-message"
+            maxlength="1000"
+            placeholder="I was wondering about the availability and rates of the following doors (NB: Use the door codes to refer to specific doors):"
+          ></textarea>
+          <div class="submit">
+            <button type="submit" class="submit-button js-submit-quote">
+              Submit
+            </button>
+          </div>
+
+          <p class="warning">
+            Make sure to avoid including any sensitive information you don't
+            want to share with First Class Doors.
+          </p>
+        </form>
+      </div>
+    </div>
+    <!-- HEADER  -->
+    <header class="header">
+      <!-- LOGO  -->
+      <div class="header-logo">
+        <a href="index.html"> <img src="icons/logo-FCD.png" /></a>
+      </div>
+
+      <i class="material-icons menu-btn js-menu-btn">menu</i>
+
+      <!-- NAVBAR  -->
+      <nav class="navbar">
+        <div class="head">
+          <a href="index.html"
+            ><span class="logo-head">First Class Doors</span></a
+          >
+          <button class="close-btn js-close-btn">&times;</button>
+        </div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Our Products +</a>
+            <ul>
+              <li><a href="metal-sd.html">Metal Security Doors </a></li>
+              <li><a href="wooden-sd.html">Wooden Security Doors</a></li>
+              <li><a href="internal-d.html">Internal Doors</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- HEADER QUOTE BUTTON  -->
+      <div class="button-container">
+        <button class="get-quote header-quote js-quote-btn">Get Quote</button>
+      </div>
+    </header>
+
+    <div><h2 class="title">Contact Us</h2></div>
+    <!-- BREADCRUMBS  -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="activeBreadcrumb"
+        ><span class="forward-slash">/</span> Contact Us</span
+      >
+    </div>
+
+    <div class="branches-container">
+      <!-- Botwe Branch  -->
+      <div data-aos="slide-up" class="branch">
+        <div class="branch-title-container">
+          <h1 class="branch-title">Ashaley Botwe</h1>
+        </div>
+        <div class="location">
+          <div class="icon"><i class="material-icons">location_on</i></div>
+          <div class="details">
+            <p>Opposite Total Energies</p>
+          </div>
+        </div>
+
+        <div class="call">
+          <div class="icon"><i class="material-icons">call</i></div>
+
+          <div class="details">
+            <a href="tel:+233 020-047-1104">+233 20 047 1104</a>
+          </div>
+        </div>
+        <div class="working-hours">
+          <div class="icon"><i class="material-icons">schedule</i></div>
+          <div class="details">
+            <p>8:00 ~ 17:00 - Mon - Fri</p>
+            <p>9:00 ~ 14:00 - Sat</p>
+          </div>
+        </div>
+        <div class="email">
+          <div class="icon"><i class="material-icons">email</i></div>
+          <div class="details">
+            <p><a href="hsfarid08@gmail.com">firsclassdoors@gmail.com</a></p>
+          </div>
+        </div>
+        <div id="googleMap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327.4197874446391!2d-0.13072490081350766!3d5.683604015892562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf831f5e8bec3d%3A0x90195c624010c24f!2sMVM9%2BCQC%2C%20Ashale%20Botwe%20Nmai%20Dzorn%20Rd%2C%20Madina!5e0!3m2!1sen!2sgh!4v1706804523376!5m2!1sen!2sgh"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <!-- Baron Junction Branch  -->
+      <div data-aos="slide-up" class="branch">
+        <div class="branch-title-container">
+          <h1 class="branch-title">
+            Baron Junction <span class="head-office">(Head Office)</span>
+          </h1>
+        </div>
+        <div class="location">
+          <div class="icon"><i class="material-icons">location_on</i></div>
+          <div class="details">
+            <p>Off Adenta Dodowa Highway</p>
+          </div>
+        </div>
+
+        <div class="call">
+          <div class="icon"><i class="material-icons">call</i></div>
+          <div class="details">
+            <a href="tel:+233 020-478-4421">+233 20 478 4421</a>
+          </div>
+        </div>
+        <div class="working-hours">
+          <div class="icon"><i class="material-icons">schedule</i></div>
+          <div class="details">
+            <p>8:00 ~ 17:00 - Mon - Fri</p>
+            <p>9:00 ~ 14:00 - Sat</p>
+          </div>
+        </div>
+        <div class="email">
+          <div class="icon"><i class="material-icons">email</i></div>
+          <div class="details">
+            <p><a href="hsfarid08@gmail.com">firsclassdoors@gmail.com</a></p>
+          </div>
+        </div>
+        <div id="googleMap">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.672414438814!2d-0.14832802501331965!3d5.760197594222225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf7956f2d3e8e1%3A0xfb7307bf08ff8131!2sFirst%20Class%20Doors!5e0!3m2!1sen!2sgh!4v1696243392548!5m2!1sen!2sgh"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <!-- Dodowa Branch  -->
+      <div data-aos="slide-up" class="branch">
+        <div class="branch-title-container">
+          <h1 class="branch-title">Dodowa</h1>
+        </div>
+        <div class="location">
+          <div class="icon"><i class="material-icons">location_on</i></div>
+          <div class="details">
+            <p>Beside Olives Group Construction</p>
+          </div>
+        </div>
+
+        <div class="call">
+          <div class="icon"><i class="material-icons">call</i></div>
+          <div class="details">
+            <a href="tel:+233 020-045-2286">+233 20 045 2286</a>
+          </div>
+        </div>
+        <div class="working-hours">
+          <div class="icon"><i class="material-icons">schedule</i></div>
+          <div class="details">
+            <p>8:00 ~ 17:00 - Mon - Fri</p>
+            <p>9:00 ~ 14:00 - Sat</p>
+          </div>
+        </div>
+        <div class="email">
+          <div class="icon"><i class="material-icons">email</i></div>
+          <div class="details">
+            <p><a href="hsfarid08@gmail.com">firsclassdoors@gmail.com</a></p>
+          </div>
+        </div>
+        <div id="googleMap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63500.444884284225!2d-0.1388762972102652!3d5.886813738708336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf7b398cccf421%3A0x306178fee670f2db!2sDodowa!5e0!3m2!1sen!2sgh!4v1706893936144!5m2!1sen!2sgh"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION  -->
+    <section class="contact-section">
+      <h2 data-aos="fade-left" class="section-title">Contact Us</h2>
+      <div class="contact-container">
+        <div class="address">
+          <i class="material-icons contact-icons">location_on</i>
+          <h3>Our Address</h3>
+          <p>
+            Baron Junction (Head Office) <br />
+            Off Adenta Dodowa Highway, Accra - Ghana
+          </p>
+        </div>
+        <div class="email-call">
+          <div class="email">
+            <i class="material-icons contact-icons">email</i>
+            <h3>Email Us</h3>
+            <a href="mailto:firstclassdoors@gmail.com"
+              >firstclassdoors@gmail.com</a
+            >
+          </div>
+          <div class="call">
+            <i class="material-icons contact-icons">call</i>
+            <h3>Call Us</h3>
+            <a href="tel:+233 050-661-2476">+233 50 661 2476</a>
+            <a href="tel:+233 020-478-4421">+233 20 478 4421</a>
+          </div>
+        </div>
+
+        <div class="contact-message">
+          <form
+            class="contact-form"
+            onsubmit="sendEmail(); reset(); return false;"
+          >
+            <h3>Message Us</h3>
+            <label for="name">Name:</label>
+            <input id="name" class="form-input" type="text" />
+            <label for="email">Email:</label>
+            <input id="email" class="form-input" type="email" />
+
+            <p class="textarea-title">Message</p>
+            <textarea
+              name="message"
+              id="message"
+              rows="3"
+              placeholder="Message"
+            ></textarea>
+            <button class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4 class="footer-title">Company</h4>
+            <ul>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="">our products</a></li>
+              <li><a href="">privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Shop</h4>
+            <ul>
+              <li><a href="metal-sd.html">Metal doors</a></li>
+              <li><a href="wooden-sd.html">wooden doors</a></li>
+              <li><a href="internal-d.html">Internal doors</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">get help</h4>
+            <ul>
+              <li><a href="help.html">Installation Guidelines</a></li>
+
+              <li><a href="help.html">Delivery Information</a></li>
+              <li><a href="help.html">Payment and Refund policy</a></li>
+              <li><a href="contact.html">Branches</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">follow us</h4>
+            <div class="social-links">
+              <a
+                href="https://instagram.com/first.class.doors"
+                class="fa fa-instagram"
+                target="_blank"
+              ></a>
+            </div>
+            <div class="copyright">
+              Copyright &copy; 2024, All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/app.js"></script>
+    <!-- animate on scroll  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+      });
+    </script>
+  </body>
+</html>

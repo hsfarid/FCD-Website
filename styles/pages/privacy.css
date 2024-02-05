@@ -1,0 +1,9 @@
+div.disclaimer {
+  background-color: red;
+  padding: 12px 20px;
+  text-align: center;
+}
+div.disclaimer p {
+  font-size: 26px;
+  color: white;
+}

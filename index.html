@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Class Doors</title>
+    <!-- FAVICON  -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- poppins font cdn  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- materials icons and font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Links for CSS style sheets  -->
+    <link rel="stylesheet" href="styles/shared/header.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/shared/footer.css" />
+
+    <!-- animate on scroll  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- EMAIL JS SCRIPT  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Xxl2okWcoKWjBSArx",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- QUOTE MODAL  -->
+    <div class="quote-container">
+      <div class="quote-modal js-quote-modal">
+        <div class="model-header">
+          <h2 class="quote-title">Get quote</h2>
+          <i id="js-close-btn" class="material-icons close-quote">close</i>
+        </div>
+        <form
+          action=""
+          class="quote-form"
+          onsubmit="sendQuote(); reset(); return false;"
+        >
+          <div class="input-col">
+            <input
+              type="text"
+              placeholder="Name"
+              class="quote-input name js-quote-name"
+            />
+          </div>
+          <div class="input-col">
+            <input
+              type="tel"
+              placeholder="Phone number"
+              class="quote-input number js-quote-number"
+            />
+          </div>
+          <div class="input-col">
+            <input
+              type="email"
+              placeholder="Email"
+              class="quote-input email js-quote-email"
+              required
+            />
+            <p class="valid-email">*Valid email address required</p>
+          </div>
+
+          <p class="request">List your requirements</p>
+          <textarea
+            name="message"
+            class="message js-quote-message"
+            maxlength="1000"
+            placeholder="I was wondering about the availability and rates of the following doors (NB: Use the door codes to refer to specific doors):"
+          ></textarea>
+          <div class="submit">
+            <button type="submit" class="submit-button js-submit-quote">
+              Submit
+            </button>
+          </div>
+
+          <p class="warning">
+            Make sure to avoid including any sensitive information you don't
+            want to share with First Class Doors.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- TO TOP BUTTON  -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="material-icons arrow-upward-btn">arrow_upward</i>
+    </button>
+
+    <!-- NAVIGATION BAR  -->
+    <header class="header">
+      <!-- Header Logo  -->
+      <div class="header-logo">
+        <a href="index.html"><img src="icons/logo-FCD.png" alt="" /></a>
+      </div>
+      <!-- menu icon  -->
+      <i class="material-icons menu-btn js-menu-btn">menu</i>
+
+      <!-- Nav Links  -->
+      <nav class="navbar">
+        <div class="head">
+          <a href="index.html"
+            ><span class="logo-head">First Class Doors</span></a
+          >
+          <button class="close-btn js-close-btn">&times;</button>
+        </div>
+
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li>
+            <a href="#">Our Products +</a>
+            <ul>
+              <li><a href="metal-sd.html">Metal Security Doors </a></li>
+              <li><a href="wooden-sd.html">Wooden Security Doors</a></li>
+              <li><a href="internal-d.html">Internal Doors</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Get quote button  -->
+      <div class="button-container">
+        <button class="get-quote header-quote js-quote-btn">Get Quote</button>
+      </div>
+    </header>
+
+    <!-- HERO SECTION  -->
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <div class="col">
+          <h1 class="heading">Perfect doors for <span>all</span> buildings</h1>
+          <p>
+            We serve you quality Metal security doors, Wooden security doors,
+            Wooden internal doors and PVC (hard plastic) internal doors for your
+            houses.
+          </p>
+
+          <button class="get-quote hero-quote js-quote-btn">Get Quote</button>
+          <a class="cta-contact" href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+          <div class="image-container">
+            <img src="images/products/israeli doors/IS-5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS AND SERVICES SECTION  -->
+    <section class="products-section">
+      <h2 data-aos="fade-left" class="section-title">
+        Our Products & Services
+      </h2>
+      <div class="row">
+        <div class="col">
+          <div class="image-container">
+            <img src="icons/door-icon-10437.png" alt="" />
+          </div>
+          <div class="text-content">
+            <h3 class="product-name">Security Doors</h3>
+            <p>
+              Are you trying to find a quality, high-security and
+              lifetime-lasting entry door for your home? or a door that's
+              affordable for you? First Class Doors is your one-stop shop for
+              high-quality, durable and reasonably priced entry doors.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="image-container">
+            <img src="icons/internal door icon 1.png" alt="" />
+          </div>
+          <div class="text-content">
+            <h3 class="product-name">Internal Doors</h3>
+            <p>
+              Our top-notch interior doors have magnetic locks to prevent loud
+              banging and provide you a quiet and peaceful space. They are
+              long-lasting, do not fade, and have a smooth surface that prevents
+              dust from collecting on them.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="image-container">
+            <img src="icons/customer icon 1.png" alt="" />
+          </div>
+          <div class="text-content">
+            <h3 class="product-name">Customer Services</h3>
+            <p>
+              We go the extra mile to make sure you're satisfied. We offer free
+              delivery and installation of your door(s), as well as maintenance
+              and care guidelines and other policies, to enhance your experience
+              with our doors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE SECTION  -->
+    <section class="explore-section">
+      <h2 data-aos="slide-up" class="section-title">Explore</h2>
+      <div class="row">
+        <div data-aos="slide-up" class="col">
+          <div class="card-image">
+            <a class="card-link" href="metal-sd.html">
+              <img src="images/products/metal security doors/IS-6a.jpg" alt=""
+            /></a>
+          </div>
+          <div class="card-text">
+            <a class="card-link" href="metal-sd.html"
+              ><h3>Metal Security Doors</h3></a
+            >
+            <p>Doors that speak, attract, protect, and last.</p>
+            <a class="card-link" href="metal-sd.html"
+              ><i class="material-icons arrow-icon">arrow_forward</i></a
+            >
+          </div>
+        </div>
+        <div data-aos="slide-up" class="col">
+          <div class="card-image">
+            <a href="wooden-sd.html" class="card-link">
+              <img src="images/products/wooden security doors/wd7.jpg" alt=""
+            /></a>
+          </div>
+          <div class="card-text">
+            <a href="wooden-sd.html" class="card-link">
+              <h3>Wooden Security Doors</h3></a
+            >
+            <p>
+              Beautiful and quality wooden security doors for your dream home.
+            </p>
+            <a href="wooden-sd.html" class="card-link">
+              <i class="material-icons arrow-icon">arrow_forward</i></a
+            >
+          </div>
+        </div>
+        <div data-aos="slide-up" class="col">
+          <div class="card-image">
+            <a href="internal-d.html" class="card-link">
+              <img src="images/products/internal doors/wi1.jpg" alt=""
+            /></a>
+          </div>
+          <div class="card-text">
+            <a href="internal-d.html" class="card-link">
+              <h3>Wooden Internal Doors</h3></a
+            >
+            <p>Noise-free wooden internal doors for your peaceful home.</p>
+            <a href="internal-d.html" class="card-link">
+              <i class="material-icons arrow-icon">arrow_forward</i></a
+            >
+          </div>
+        </div>
+        <div data-aos="slide-up" class="col">
+          <div class="card-image">
+            <a href="internal-d.html" class="card-link">
+              <img src="images/products/internal doors/pi1.jpg" alt=""
+            /></a>
+          </div>
+          <div class="card-text">
+            <a href="internal-d.html" class="card-link">
+              <h3>PVC Internal Doors</h3></a
+            >
+            <p>Noise-free PVC internal doors for your peaceful home.</p>
+            <a href="internal-d.html" class="card-link">
+              <i class="material-icons arrow-icon">arrow_forward</i></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADVANTAGES/BENEFITS SECTION  -->
+    <section class="benefits-section">
+      <h2 data-aos="fade-up" class="section-title">Why Choose Us</h2>
+      <div class="row">
+        <div class="col text-content">
+          <p class="description">
+            We at <strong>First Class Doors</strong> provide the best doors and
+            services. Our goal is to give you value for every dime you spend
+            with us. See why the majority of people pick us and why we stand out
+            from other businesses;
+          </p>
+          <div class="benefits-container">
+            <div class="benefit benefit-one">
+              <h5>Quality</h5>
+              <p>
+                We offer you quality and luxurious doors at unbeatable prices.
+              </p>
+            </div>
+            <div class="benefit benefit-two">
+              <h5>Durability</h5>
+              <p>
+                Choose us and avoid occasionally spending money on new doors
+                because our doors are built to last a lifetime.
+              </p>
+            </div>
+            <div class="benefit benefit-three">
+              <h5>Free Delivery</h5>
+              <p>
+                We deliver your door(s) to your site for free. We give you the
+                best customer experience and make your life easier.
+              </p>
+            </div>
+            <div class="benefit benefit-four">
+              <h5>Free Installation</h5>
+              <p>
+                Your door(s) will be installed by our seasoned and professional
+                installers for free.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col image-content">
+          <img src="images/hero.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION  -->
+    <section class="features-section">
+      <h2 data-aos="fade-down" class="section-title">
+        Learn More About Our Doors
+      </h2>
+      <div class="container">
+        <div data-aos="slide-up" class="feature">
+          <div class="numbered-list">
+            <div class="number">01</div>
+            <h5>Central Locking System</h5>
+          </div>
+
+          <p>
+            Our doors have side, bottom, and top locks. This increases the
+            doors' sturdiness and level of security.
+          </p>
+        </div>
+        <div data-aos="slide-up" class="feature">
+          <div class="numbered-list">
+            <div class="number">02</div>
+            <h5>No Fading</h5>
+          </div>
+
+          <p>Our doors never fade. Its grace and beauty last a lifetime.</p>
+        </div>
+        <div data-aos="slide-up" class="feature">
+          <div class="numbered-list">
+            <div class="number">03</div>
+            <h5>Bullet proof cylinder</h5>
+          </div>
+
+          <p>
+            To keep you safe from gunshots, we also have doors with bulletproof
+            cylinders.
+          </p>
+        </div>
+        <div data-aos="slide-up" class="feature">
+          <div class="numbered-list">
+            <div class="number">04</div>
+            <h5>Fire resisstance</h5>
+          </div>
+          <p>
+            We have doors that are resistant to fire and can withstand flames
+            for a maximum of two hours.
+          </p>
+        </div>
+        <div data-aos="slide-up" class="feature">
+          <div class="numbered-list">
+            <div class="number">05</div>
+            <h5>Anti-corrosion and rust</h5>
+          </div>
+
+          <p>
+            Our metal doors and frames are made of galvanized Aluminium and are
+            resistant to corrosion and free of rust.
+          </p>
+        </div>
+        <div data-aos="slide-up" class="feature">
+          <div class="numbered-list">
+            <div class="number">06</div>
+            <h5>Aluminium galvanized</h5>
+          </div>
+
+          <p>
+            Our metal doors are strong, secure, and Aluminium galvanized. They
+            can withstand the harshest of weather.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION  -->
+    <section class="contact-section">
+      <h2 data-aos="fade-left" class="section-title">Contact Us</h2>
+      <div class="contact-container">
+        <div class="address">
+          <i class="material-icons contact-icons">location_on</i>
+          <h3>Our Address</h3>
+          <p>
+            Baron Junction (Head Office) <br />
+            Off Adenta Dodowa Highway, Accra - Ghana
+          </p>
+        </div>
+        <div class="email-call">
+          <div class="email">
+            <i class="material-icons contact-icons">email</i>
+            <h3>Email Us</h3>
+            <a href="mailto:firstclassdoors@gmail.com"
+              >firstclassdoors@gmail.com</a
+            >
+          </div>
+          <div class="call">
+            <i class="material-icons contact-icons">call</i>
+            <h3>Call Us</h3>
+            <a href="tel:+233 050-661-2476">+233 50 661 2476</a>
+            <a href="tel:+233 020-478-4421">+233 20 478 4421</a>
+          </div>
+        </div>
+
+        <div class="contact-message">
+          <form
+            class="contact-form"
+            onsubmit="sendEmail(); reset(); return false;"
+          >
+            <h3>Message Us</h3>
+            <label for="name">Name:</label>
+            <input id="name" class="form-input" type="text" />
+            <label for="email">Email:</label>
+            <input id="email" class="form-input" type="email" />
+
+            <p class="textarea-title">Message</p>
+            <textarea
+              name="message"
+              id="message"
+              rows="3"
+              placeholder="Message"
+            ></textarea>
+            <button class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4 class="footer-title">Company</h4>
+            <ul>
+              <li><a href="about.html">about us</a></li>
+              <li><a href=" ">our products</a></li>
+              <li><a href="privacy.html">privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Shop</h4>
+            <ul>
+              <li><a href="metal-sd.html">Metal doors</a></li>
+              <li><a href="wooden-sd.html">wooden doors</a></li>
+              <li><a href="internal-d.html">Internal doors</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">get help</h4>
+            <ul>
+              <li><a href="help.html">Installation Guidelines</a></li>
+
+              <li><a href="help.html">Delivery Information</a></li>
+              <li><a href="help.html">Payment and Refund policy</a></li>
+              <li><a href="contact.html">Branches</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">follow us</h4>
+            <div class="social-links">
+              <a
+                href="https://instagram.com/first.class.doors"
+                class="fa fa-instagram"
+                target="_blank"
+              ></a>
+            </div>
+            <div class="copyright">
+              Copyright &copy; 2024, All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS  -->
+    <script src="scripts/app.js"></script>
+    <!-- animate on scroll  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+/* SECTION TITLE  */
+.title {
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(var(--primary-color), 0.6);
+  text-align: center;
+  padding: 30px;
+  font-size: 32px;
+  width: 100%;
+}
+
+p {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 32px;
+}
+/* HISTORY  */
+div.history {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+span.fcd {
+  font-size: 30px;
+  color: rgb(var(--primary-color));
+  font-weight: 500;
+}
+/* MOTIVATION / AIMS AND OBJ AND TEAM*/
+.motivation,
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 20px;
+}
+.motivation {
+  background-color: #f7f7f7;
+  padding: 60px 10px;
+}
+.about-text-content,
+.team-text-content {
+  padding: 0 20px;
+}
+.about-text-content p,
+.showrooms p,
+.team-text-content p {
+  line-height: 30px;
+}
+.about-image-container,
+.team-image-container {
+  width: 90%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.about-image-container img,
+.team-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* SHOWROOMS AND WAREHOUSE  */
+.showrooms {
+  background-color: rgba(var(--primary-color), 0.6);
+  margin: 0 auto;
+  padding: 30px;
+}
+.showrooms h2 {
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.showrooms p {
+  color: #fff;
+  font-weight: 200;
+}
+
+/* responsive design  */
+
+/* for small screens  */
+@media (max-width: 899px) {
+  .motivation,
+  .team {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
