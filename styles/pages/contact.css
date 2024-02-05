@@ -91,14 +91,14 @@ span.head-office {
     grid-template-columns: 1fr;
   }
   .branch {
-    width: 85%;
+    width: 85vw;
     margin: auto;
   }
   .branch .location,
   .branch .call,
   .branch .working-hours,
   .branch .email {
-    gap: 60px;
+    gap: 30px;
   }
 }
 @media (min-width: 720px) and (max-width: 1090px) {
