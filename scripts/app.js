@@ -126,3 +126,10 @@ submitQuoteBtn.addEventListener("cllick", (e) => {
   e.preventDefault();
   sendQuote();
 });
+
+//copyright code
+const yearSpan = document.querySelector(".year");
+
+const date = new Date();
+const year = date.getFullYear();
+yearSpan.innerHTML = year;
